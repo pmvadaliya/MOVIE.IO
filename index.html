@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>MOVIE.IO</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0px auto;
+    width: 90vw;
+    /* display: inline-flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    background-color: rgb(91, 3, 91);
+}
+
+.navbar {
+    background-color: rgb(91, 3, 91);
+    display: inline-flex;
+    height: 5rem;
+    font-family: 'Rubik', sans-serif;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    width: 25vw;
+    display: inline-flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* background-color: black; */
+}
+
+.logo img {
+    margin: 2px 2px 2px 6px;
+    width: 10rem;
+}
+
+.logo img:hover {
+    transform: rotate(-10deg);
+    transition-duration: 1s;
+    cursor: pointer;
+}
+
+.leftnav {
+    width: 65vw;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /* justify-content: center; */
+}
+
+.leftnav ul li {
+    display: inline-flex;
+    padding: 0px 15px;
+}
+
+.leftnav ul li a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+    font-family: 'Rowdies', cursive;
+}
+
+.leftnav ul li a:hover {
+    text-decoration: underline 2px rgb(218, 10, 218);
+    transform: rotate(2deg);
+    transition-duration: 0.1s;
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
+main {
+    background-color: rgb(203, 168, 203);
+    height: 70rem;
+}
+
+.category {
+    background-color: rgb(135, 77, 135);
+    height: 5rem;
+    width: 90vw;
+    flex-wrap: wrap;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+.category select {
+    display: inline-flex;
+
+}
+
+.category select {
+    text-decoration: none;
+    color: white;
+    margin: 2px;
+    padding: 5px;
+    background-color: rgb(135, 77, 135);
+    border: 2px solid rgb(135, 77, 135);
+    font-family: 'Kanit', sans-serif;
+}
+
+.category select option {
+    background-color: rgb(143, 46, 143);
+    color: white;
+    font-family: 'Kanit', sans-serif;
+}
+
+.category select:hover {
+    cursor: pointer;
+    color: #edc9e9;
+}
+
+.movie {
+    width: 5rem;
+}
+
+.webseries {
+    width: 7rem;
+}
+
+.dualaudio {
+    width: 9rem;
+}
+
+.byyear {
+    width: 6rem;
+}
+
+.ByQualities {
+    width: 6rem;
+}
+
+
+.serchbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    background-color: rgb(173, 132, 173);
+    position: sticky;
+    top: 0;
+}
+
+.serch input {
+    height: 1.8rem;
+    width: 53vw;
+    border: 2px solid rgb(173, 132, 173);
+    border-radius: 0.4rem;
+    padding: 0px 10px;
+}
+
+.serch button {
+    padding: 0.25rem;
+    background-color: white;
+    border: 2px solid rgb(173, 132, 173);
+    border-radius: 0.4rem;
+    font-size: 10px;
+}
+
+.serch input:hover {
+    padding: 12px;
+    transition-duration: 1s;
+    background-color: #890f7b;
+    color: white;
+}
+
+.serch button:hover {
+    background-color: black;
+    color: white;
+    transform: rotate(-1deg);
+    transition-duration: 5s;
+    animation: buttonhover 1s infinite;
+}
+
+@keyframes buttonhover {
+    0% {
+        background-color: black;
+        color: white;
+    }
+
+    50% {
+        background-color: rgb(123, 123, 123);
+        color: rgb(255, 255, 255);
+    }
+
+    100% {
+        background-color: white;
+        color: black;
+    }
+
+}
+
+.SOUTH {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 5rem;
+    background-color: rgb(201, 154, 201);
+    font-family: 'Raleway', sans-serif;
+    position: sticky;
+    top: 0;
+}
+
+.SOUTH div {
+    padding: 4px;
+    margin: 0px 5px;
+}
+
+.SOUTH div:hover {
+    text-decoration: underline;
+    color: black;
+    transition-duration: 1s;
+}
+
+.SOUTH div a {
+    text-decoration: none;
+    color: white;
+}
+
+.SOUTH div a:hover {
+    text-decoration: underline;
+    color: black;
+    cursor: pointer;
+}
+
+.bollywood {
+    border: 2px solid rgb(91, 3, 91);
+    border-radius: 5px;
+    background-color: rgb(91, 3, 91);
+}
+
+.hollywood {
+    border: 2px solid rgb(91, 3, 91);
+    border-radius: 5px;
+    background-color: rgb(91, 3, 91);
+}
+
+.south1 {
+    border: 2px solid rgb(91, 3, 91);
+    border-radius: 5px;
+    background-color: rgb(91, 3, 91);
+}
+
+.action {
+    border: 2px solid rgb(91, 3, 91);
+    border-radius: 5px;
+    background-color: rgb(91, 3, 91);
+}
+
+.horror {
+    border: 2px solid rgb(91, 3, 91);
+    border-radius: 5px;
+    background-color: rgb(91, 3, 91);
+}
+
+.bollywood:hover {
+    border: 2px solid white;
+    color: black;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+}
+
+.hollywood:hover {
+    border: 2px solid white;
+    color: black;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+}
+
+.south1:hover {
+    border: 2px solid white;
+    color: black;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+}
+
+.action:hover {
+    border: 2px solid white;
+    color: black;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+}
+
+.horror:hover {
+    border: 2px solid white;
+    color: black;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+}
+
+.kgf11 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1rem;
+    position: sticky;
+    top: 50;
+    background-color: rgb(203, 168, 203);
+}
+.kgf11 div p a{
+    text-decoration: none;
+    color: black;
+}
+.kgf11 div p a:hover{
+    color: red;
+}
+
+.avtar {
+    width: 10rem;
+}
+
+.avtar1 img {
+    width: 10rem;
+}
+
+.loki {
+    width: 10rem;
+}
+
+.loki1 img {
+    width: 10rem;
+}
+
+.wednesday {
+    width: 10rem;
+}
+
+.wednesday1 img {
+    width: 10rem;
+}
+
+.eternals {
+    width: 10rem;
+}
+
+.eternals1 img {
+    width: 10rem;
+}
+
+.love {
+    width: 10rem;
+}
+
+.love1 img {
+    width: 10rem;
+}
+
+.chi {
+    width: 10rem;
+}
+
+.chi1 img {
+    width: 10rem;
+}
+
+.spider {
+    width: 10rem;
+}
+
+.spider1 img {
+    width: 10rem;
+}
+
+.taza {
+    width: 10rem;
+}
+
+.taza1 img {
+    width: 10rem;
+}
+
+.the {
+    width: 10rem;
+}
+
+.the1 img {
+    width: 10rem;
+}
+
+.wanda {
+    width: 10rem;
+}
+
+.wanda1 img {
+    width: 10rem;
+}
+
+.hit {
+    width: 10rem;
+}
+
+.hit1 img {
+    width: 10rem;
+}
+
+.mili {
+    width: 10rem;
+}
+
+.mili1 img {
+    width: 10rem;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@800&display=swap');
+
+footer {
+    background-color: rgb(91, 3, 91);
+    color: white;
+    height: 3rem;
+    display: inline-flex;
+    font-family: 'Rubik', sans-serif;
+}
+
+footer div {
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer div p:hover {
+    font-size: large;
+}
+@media only screen and (max-width:605px) {
+    body {
+        background-color: rgb(72, 4, 72);
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        height: 6rem;
+    }
+
+    .logo {
+        width: 90vw;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(72, 4, 72);
+    }
+
+    .leftnav {
+        height: 5vh;
+        width: 90vw;
+        margin: 10px 0 0;
+    }
+
+    .leftnav ul li {
+        padding: 0px 5px;
+    }
+
+    .SOUTH {
+        width: 90vw;
+        height: 6rem;
+        display: inline-flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .SOUTH div {
+        margin: 0.3rem;
+    }
+}
+
+@media only screen and (max-width:322px){
+
+.leftnav ul li{
+    padding: 0px 2px;
+}
+.leftnav ul li a{
+    padding: 0px 0px;
+    font-size: 0.8rem;
+}
+.SOUTH{
+    height: 8rem;
+}
+}
+@media only screen and (max-width:370px) {
+
+main{
+    height: 350vh;
+}
+    .leftnav ul li {
+        padding: 0px 0.8rem;
+    }
+
+    .leftnav ul li a {
+        padding: 0px 0px;
+        font-size: 0.8rem;
+    }
+
+    .SOUTH {
+        height: 8rem;
+    }
+
+    .kgf11 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 1rem;
+    }
+
+    .avtar {
+        width: 8rem;
+        margin: 0.2rem;
+    }
+
+    .avtar1 img {
+        width: 8rem;
+        margin: 0.2rem;
+    }
+
+    .loki {
+        width: 8rem;
+        margin: 0.2rem;
+    }
+
+    .loki1 img {
+        width: 8rem;
+        margin: 0.2rem;
+    }
+
+    .wednesday {
+        width: 8rem;
+        margin: 0.2rem;
+    }
+
+    .wednesday1 img {
+        width: 8rem;
+        margin: 0.2rem;
+    }
+
+    .eternals {
+        width: 8rem;
+        margin: 0.2rem;
+    }
+
+    .eternals1 img {
+        width: 8rem;
+        margin: 0.2rem;
+    }
+
+    .love {
+        width: 8rem;
+        margin: 0.2rem;
+    }
+
+    .love1 img {
+        width: 8rem;
+        margin: 0.2rem;
+    }
+
+    .chi {
+        width: 8rem;
+        margin: 0.2rem;
+    }
+
+    .chi1 img {
+        width: 8rem;
+        margin: 0.2rem;
+    }
+
+    .spider {
+        width: 8rem;
+        margin: 0.2rem;
+    }
+
+    .spider1 img {
+        width: 8rem;
+        margin: 0.2rem;
+    }
+
+    .taza {
+        width: 8rem;
+        margin: 0.2rem;
+    }
+
+    .taza1 img {
+        width: 8rem;
+        margin: 0.2rem;
+    }
+
+    .the {
+        width: 8rem;
+        margin: 0.2rem;
+    }
+
+    .the1 img {
+        width: 8rem;
+        margin: 0.2rem;
+    }
+
+    .wanda {
+        width: 8rem;
+        margin: 0.2rem;
+    }
+
+    .wanda1 img {
+        width: 8rem;
+        margin: 0.2rem;
+    }
+
+    .hit {
+        width: 8rem;
+        margin: 0.2rem;
+    }
+
+    .hit1 img {
+        width: 8rem;
+        margin: 0.2rem;
+    }
+
+    .mili {
+        width: 8rem;
+        margin: 0.2rem;
+    }
+
+    .mili1 img {
+        width: 8rem;
+        margin: 0.2rem;
+    }
+
+
+}
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="MOVIE.io-removebg-preview.png" alt="LOGO">
+        </div>
+        <div class="leftnav">
+
+            <ul>
+                <li><a href="HOME.html" class="HOME">HOME</a></li>
+                <li><a href="ABOUT.html" class="ABOUT">ABOUT</a></li>
+                <li><a href="CONTACT.html" class="CONTACT">CONTACT</a></li>
+                <li><a href="UPDATE.html" class="UPDATE">UPDATE</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <main>
+        <div class="category">
+            <select class="movie">
+                <option value="MOVIE" selected>MOVIE</option>
+                <option value="BOLLYWOOD">BOLLYWOOD</option>
+                <option value="HOLLYWOOD">HOLLYWOOD</option>
+                <option value="SOUTH">SOUTH</option>
+                <option value="GUJRATI">GUJRATI</option>
+            </select>
+            <select class="webseries">
+                <option value="WEB SERIES" selected>WEB SERIES</option>
+                <option value="AMAZON PRIME">AMAZON PRIME</option>
+                <option value="NETFLIX">NETFLIX</option>
+                <option value="HOTSTAR">HOTSTAR</option>
+                <option value="MX PLAYER">MX PLAYER</option>
+                <option value="ZEE5 ORIGINALS">ZEE5 ORIGINALS</option>
+                <option value="VOOT">VOOT</option>
+                <option value="SONYLIV">SONYLIV</option>
+            </select>
+            <select class="DUAL AUDIO">
+                <option value="DUAL AUDIO">DUAL AUDIO</option>
+                <option value="MOVIE">MOVIE</option>
+                <option value="WEB SERIES">WEB SERIES</option>
+            </select>
+            <select class="byyear">
+                <option value="BY YEAR" selected>BY YEAR</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+                <option value="2016">2016</option>
+                <option value="2015">2015</option>
+                <option value="2014">2014</option>
+                <option value="2013">2013</option>
+                <option value="2012">2012</option>
+                <option value="2011">2011</option>
+                <option value="2010">2010</option>
+                <option value="2009">2009</option>
+            </select>
+            <select class="ByQualities">
+                <option value="ByQualities" selected>QUALITIES</option>
+                <option value="480p">480p</option>
+                <option value="720p">720p</option>
+                <option value="1080p">1080p</option>
+                <option value="2160p 4k">2160p 4k</option>
+            </select>
+        </div>
+        <div class="serchbar">
+            <div class="serch">
+                <input type="search" placeholder="Movie.io Search">
+                <button class="searchbtn">SEARCH</button>
+            </div>
+        </div>
+        <div class="SOUTH">
+            <div class="bollywood"><a href="BOLLYWOOD.HTML">BOLLYWOOD</a></div>
+            <div class="hollywood"><a href="HOLLYWOOD.HTML">HOLLYWOOD</a></div>
+            <div class="action"><a href="ACTION.HTML">ACTION</a></div>
+            <div class="south1"><a href="SOUTH.HTML">SOUTH</a></div>
+            <div class="horror"><a href="HORROR.HTML">HORROR</a></div>
+        </div>
+        <div class="kgf11">
+            <div class="avtar">
+                <div class="avtar1">
+                    <img src="Avatar-2-2022-posters.jpg" alt="avtar">
+                </div>
+                <div class="avtar2">
+                    <p><a
+                            href="https://vegamovies.day/download-avatar-2-the-way-of-water-2022-hindi-audio-480p-720p-1080p-hdts-hdrip/">Download
+                            Avatar 2: The Way of Water (2022) Dual Audio {Hindi-English} [HDTS-HDRip] Full Movie 480p
+                            [600MB] | 720p [1.5GB] | 1080p [3.4GB]</a> </p>
+                </div>
+            </div>
+
+            <div class="loki">
+                <div class="loki1">
+                    <img src="Loki-2021-Hindi.jpg" alt="loki">
+                </div>
+                <div class="loki2">
+                    <p>
+                        <a href="https://vegamovies.day/download-loki-2021-season-1-dual-audio-hindi/">Download Loki
+                            (2021) Season 1 Dual Audio {Hindi-English} Disney+ WEB Series 480p | 720p | 1080p WEB-DL</a>
+                    </p>
+                </div>
+            </div>
+            <div class="wednesday">
+                <div class="wednesday1">
+                    <img src="Wednesday-2022-poster.jpg" alt="wednesday">
+                </div>
+                <div class="wednesday2">
+                    <p>
+                        <a
+                            href="https://vegamovies.day/download-wednesday-2022-season-1-hindi-dubbed-480p-720p-1080p-web-dl/">Download
+                            Wednesday - Netflix Original (2022) Season 1 Dual Audio {Hindi-English} 480p | 720p | 1080p
+                            WEB-DL</a>
+                    </p>
+                </div>
+            </div>
+            <div class="eternals">
+                <div class="wednesday1">
+                    <img src="ETERNALS-इटर्नल्स-2021-Movie.jpg" alt="eternals">
+                </div>
+                <div class="eternals2">
+                    <p>
+                        <a
+                            href="https://vegamovies.day/download-eternals-2021-dual-audio-hindi-bluray-480p-720p-1080p-4k-2160p/">Download
+                            Eternals (2021) IMAX BluRay Dual Audio {Hindi-English} 480p [500MB] | 720p [1.4GB] | 1080p
+                            [3.2GB] | 2160p [19GB]</a>
+                    </p>
+                </div>
+            </div>
+            <div class="love">
+                <div class="love1">
+                    <img src="Love-and-Thunder-2022-Hindi-Dubbed.jpg" alt="love and thunder">
+                </div>
+                <div class="love2">
+                    <p>
+                        <a
+                            href="https://vegamovies.day/download-thor-love-and-thunder-2022-hindi-dubbed-org-web-dl-hd-480p-720p-1080p-2160p/">Download
+                            Thor: Love and Thunder (2022) BluRay Dual Audio {Hindi-English} 480p [400MB] | 720p [1.2GB]
+                            | 1080p [3GB] | 2160p 4K UHD</a>
+                    </p>
+                </div>
+            </div>
+            <div class="chi">
+                <div class="chi1">
+                    <img src="Shang-Chi-and-the-Legend-of-the-Ten-Rings-Hindo.jpg" alt="Shang-Chi">
+                </div>
+                <div class="chi2">
+                    <p>
+                        <a
+                            href="https://vegamovies.day/download-shang-chi-and-the-legend-of-the-ten-rings-2021-dual-audio-hindi-2/">Download
+                            Shang-Chi and the Legend of the Ten Rings (2021) Dual Audio {Hindi-English} 480p [400MB] |
+                            720p [1.4GB] | 1080p [2.4GB]</a>
+                    </p>
+                </div>
+            </div>
+            <div class="spider">
+                <div class="spider1">
+                    <img src="Spider-Man-NWH.jpg" alt="spider man">
+                </div>
+                <div class="spider2">
+                    <p>
+                        <a
+                            href="https://vegamovies.day/download-spider-man-no-way-home-2022-imax-version-dual-audio-hindi-bluray-480p-720p-1080p-2160p/">Download
+                            Spider-Man: No Way Home - iMAX Version (2022) Dual Audio {Hindi-English} 480p [500MB] | 720p
+                            [1.4GB] | 1080p [3GB]</a>
+                    </p>
+                </div>
+            </div>
+            <div class="taza">
+                <div class="taza1">
+                    <img src="Taaza-Khabar-1.jpg" alt="taaza khabar">
+                </div>
+                <div class="taza2">
+                    <p>
+                        <a
+                            href="https://dotmovies.us/download-taaza-khabar-season-1-hindi-hotstar-special-complete-series-480p-720p-1080p//">Download
+                            Taaza Khabar (Season 1) Hindi Hotstar Special Complete Web Series 480p | 720p | 1080p
+                            WEB-DL</a>
+                    </p>
+                </div>
+            </div>
+            <div class="the">
+                <div class="the1">
+                    <img src="The-Guardians-of-the-Galaxy-Holiday-Special-2022-WEB-DL.jpg"
+                        alt="the guardians of the galaxy">
+                </div>
+                <div class="the2">
+                    <p>
+                        <a
+                            href="https://vegamovies.day/download-the-guardians-of-the-galaxy-holiday-special-2022-english-movie-480p-720p-1080p/">Download
+                            The Guardians of the Galaxy Holiday Special (2022) WEB-DL {English With Subtitles} Full
+                            Movie 480p [200MB] | 720p [1.3GB] | 1080p [2GB]</a>
+                    </p>
+                </div>
+            </div>
+            <div class="wanda">
+                <div class="wanda1">
+                    <img src="WandaVision.jpg" alt="wandavision">
+                </div>
+                <div class="wanda2">
+                    <p>
+                        <a href="https://vegamovies.day/download-wandavision-2021-season-1-english-480p-720p-1080p/">Download
+                            WandaVision (2021) Season 1 {English With Subtitles} DSNP WEB Series 480p | 720p WEB-DL</a>
+                    </p>
+                </div>
+            </div>
+            <div class="hit">
+                <div class="hit1">
+                    <img src="Laththi-Hindi-Dubbed-1.jpg" alt="hit">
+                </div>
+                <div class="hit2">
+                    <p>
+                        <a
+                            href="https://dotmovies.us/download-hit-the-2nd-case-2023-hindi-org-line-480p-720p-1080p-web-dl/">Download
+                            HIT: The 2nd Case (2023) WEB-DL Dual Audio [Hindi Cleaned - Telugu] Full Movie 480p [500MB]
+                            | 720p [1.3GB] | 1080p [2.5GB]</a>
+                    </p>
+                </div>
+            </div>
+            <div class="mili">
+                <div class="mili1">
+                    <img src="Milli.jpg" alt="mili">
+                </div>
+                <div class="mili2">
+                    <p>
+                        <a href="https://dotmovies.us/download-mili-2022-hindi-full-movie-web-dl-480p-720p-1080p/">Download
+                            Mili (2022) Hindi Full Movie WEB-DL 480p [300MB] | 720p [960MB] | 1080p [2.5GB]
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer>
+        <div>
+            <p>copyright &copy; Movie.io all rights reserved</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
